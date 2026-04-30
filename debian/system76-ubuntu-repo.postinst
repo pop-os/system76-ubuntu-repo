@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+# Remove old PPA
+add-apt-repository --no-update --remove --yes ppa:system76-dev/stable

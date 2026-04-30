@@ -1,0 +1,7 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: system76-ubuntu-repo
+Source: https://github.com/pop-os/system76-ubuntu-repo
+
+Files: *
+Copyright: System76
+License: GPL-3+

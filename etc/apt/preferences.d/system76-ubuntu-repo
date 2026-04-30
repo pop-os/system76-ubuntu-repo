@@ -1,0 +1,3 @@
+Package: *
+Pin: release o=system76-ubuntu-release
+Pin-Priority: 1001

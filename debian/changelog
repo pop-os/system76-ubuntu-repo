@@ -1,0 +1,5 @@
+system76-ubuntu-repo (1.0.0) jammy; urgency=low
+
+  * Initial release
+
+ -- Jeremy Soller <jeremy@system76.com>  Thu, 30 Apr 2026 16:37:59 -0600

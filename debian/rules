@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installdeb:
+	dh_installdeb
+	cp debian/conffiles debian/system76-ubuntu-repo/DEBIAN/conffiles

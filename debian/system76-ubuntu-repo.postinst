@@ -126,8 +126,26 @@ Signed-By: -----BEGIN PGP PUBLIC KEY BLOCK-----
  -----END PGP PUBLIC KEY BLOCK-----
 EOF
 
-        # Remove old PPA
-        add-apt-repository --no-update --remove --yes ppa:system76-dev/stable
+        # Disable old PPA
+        PPA="ppa.launchpad.net/system76-dev/stable/ubuntu"
+        REGEX="^deb.*${PPA}"
+        for file in /etc/apt/sources.list{,.d/*.list}
+        do
+            if grep "${REGEX}" "${file}" >/dev/null
+            then
+                echo "Disabling old PPAs in ${file}"
+                sed -i "s|${REGEX}|#&|g" "${file}"
+            fi
+        done
+        REGEX="^URIs:.*${PPA}"
+        for file in /etc/apt/sources.list.d/*.sources
+        do
+            if grep "${REGEX}" "${file}" >/dev/null
+            then
+                echo "Disabling old PPAs in ${file}"
+                mv -v "${file}" "${file}.save"
+            fi
+        done
         ;;
     *)
         ;;

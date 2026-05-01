@@ -2,4 +2,3 @@
 /debian/system76-ubuntu-repo.substvars
 /debian/system76-ubuntu-repo/
 /debian/files
-/etc/apt/sources.list.d/system76-ubuntu-repo.sources

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+case "$1" in
+    remove)
+        # Remove repo
+        rm -fv /etc/apt/sources.list.d/system76-ubuntu-repo.sources
+        ;;
+
+    *)
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

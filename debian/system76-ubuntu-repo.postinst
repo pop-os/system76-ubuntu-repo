@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+shopt -s nullglob
 
 #DEBHELPER#
 
@@ -127,7 +128,7 @@ Signed-By: -----BEGIN PGP PUBLIC KEY BLOCK-----
 EOF
 
         # Disable old PPA
-        PPA="ppa.launchpad.net/system76-dev/stable/ubuntu"
+        PPA="ppa\.launchpad.*\.net/system76-dev/stable/ubuntu"
         REGEX="^deb.*${PPA}"
         for file in /etc/apt/sources.list{,.d/*.list}
         do
